@@ -1,20 +1,21 @@
 import React from 'react';
 
-export default function CurrencyInput({ amount, onChangeAmount }){
-    return(
-        <div className="flex items-center justify-between border border-blue-500 rounded-xl px-4 py-3 mb-4">    
-            <div className="flex items-center">
-                <img src="https://flagcdn.com/w40/au.png" alt="AUD"  className="w-6 h-6 mr-2" />
-                <span className="font-medium">AUD</span>
-            </div>
-            <input
-                type="number"
-                className="text-right font-semibold text-lg outline-none w-32"
-                value={amount}
-                onChangeAmount={(e) => onChangeAmount(e.target.value)}
-            />
-
-        </div>
-    );
-
+export default function CurrencyInput({ amount, onChange,onConvert  }) {
+  return (
+    <div className="flex items-center gap-2 mb-4">
+      <input
+        type="number"
+        className="w-full border border-gray-400 rounded-lg p-2 text-lg outline-none"
+        value={amount}
+        onChange={(e) => onChange(parseFloat(e.target.value) || 0)}
+        placeholder="Enter AUD amount"
+      />
+      <button
+        className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg font-medium"
+        onClick={onConvert}
+      >
+        Convert
+      </button>
+    </div>
+  );
 }

@@ -1,9 +1,9 @@
 import React from 'react';
 
-export default function CurrencyCard({ flag,code,symbol,amount,rate }){
+export default function CurrencyCard({ code, symbol, flag, amount, rate }){
     return(
     <div className="flex items-center justify-between border rounded-lg p-3 shadow-sm mb-3 bg-white">
-      <div className="flex items-center">
+      <div className="flex items-center  gap-3">
         <img src={flag} alt={code} className="w-6 h-6 mr-3" />
         <div>
           <div className="text-md font-semibold">{code} {symbol}{amount}</div>
