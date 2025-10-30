@@ -51,6 +51,7 @@ export default function CurrencyConverter() {
           onChange={setAudAmount}
           onConvert={fetchRates}
         />
+        
         <div>
           {currencies.map((cur) => (
             <CurrencyCard
