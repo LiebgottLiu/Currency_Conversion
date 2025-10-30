@@ -18,8 +18,8 @@ The goal of this project is to provide a user-friendly currency converter with *
 
 Here are some screenshots from the demo:
 
-![Home screen](src/assets/demo/MainLook.png)
-![Historical chart popup](src/assets/demo/HistoryGraph.png)
+![Home screen](currency-converter-app/src/assets/demo/MainLook.png)
+![Historical chart popup](currency-converter-app/src/assets/demo/HistoryGraph.png)
 
 ---
 
