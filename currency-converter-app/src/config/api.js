@@ -6,3 +6,7 @@ const APP_ID = import.meta.env.VITE_OXR_APP_ID
 
 
 export const getRatesURL = () => `${API_DOMAIN}latest.json?app_id=${APP_ID}`;
+
+//get history data
+export const getHistoricalRatesURL = (date) => 
+    `${API_DOMAIN}historical/${date}.json?app_id=${APP_ID}`

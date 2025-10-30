@@ -60,6 +60,7 @@ export default function CurrencyConverter() {
               flag={cur.flag}
               rate={rates[cur.code] ? (rates[cur.code] / rates["AUD"]).toFixed(4) : "-"}
               amount={rates[cur.code] ? convert(rates[cur.code]) : "-"}
+              lastUpdated={lastUpdated}
             />
           ))}
         </div>
