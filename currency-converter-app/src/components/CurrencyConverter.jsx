@@ -2,8 +2,8 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import moment from "moment";
 import { getRatesURL } from "../config/api";
-import CurrencyInput from "./CurrencyInput";
-import CurrencyCard from "./CurrencyCard";
+import CurrencyInput from "./CurrencyInput/CurrencyInput";
+import CurrencyCard from "./CurrencyCard/CurrencyCard";
 import "../index.css";
 
 const currencies = [
@@ -15,7 +15,7 @@ const currencies = [
 ];
 
 export default function CurrencyConverter() {
-  const [audAmount, setAudAmount] = useState(0);
+  const [audAmount, setAudAmount] = useState();
   const[rates,setRates] = useState({});
   const [lastUpdated, setLastUpdated] = useState("");
 
