@@ -1,0 +1,24 @@
+.convert-button{
+  align-items: center;
+  gap: 12px;
+  background-color:  #FFA500; 
+  color : #fff; 
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  display: block; 
+  margin: 20px auto 40px auto; 
+  transition: transform 0.2s ease, background-color 0.3s ease; 
+  outline: none;
+}
+
+.convert-button:hover {
+  background-color: #ff8c00; 
+  transform: translateY(-5px); 
+}
+
+.convert-button:active {
+  transform: translateY(0); 
+  outline: none; 
+}

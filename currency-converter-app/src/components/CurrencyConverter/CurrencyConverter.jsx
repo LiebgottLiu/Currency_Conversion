@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import moment from "moment";
-import { getRatesURL } from "../config/api";
-import CurrencyInput from "./CurrencyInput/CurrencyInput";
-import CurrencyCard from "./CurrencyCard/CurrencyCard";
-import "../index.css";
+import { getRatesURL } from "../../config/api";
+import CurrencyInput from "../CurrencyInput/CurrencyInput";
+import CurrencyCard from "../CurrencyCard/CurrencyCard";
+import "./index.css";
 
 const currencies = [
   { code: 'CAD', symbol: '$', flag: 'https://flagcdn.com/w40/ca.png' },
@@ -46,12 +46,20 @@ export default function CurrencyConverter() {
     return (
       <div className="converter-container bg-gray-100 p-6 rounded-xl shadow-md max-w-md w-full">
         <h1 className="text-2xl font-semibold text-center mb-4">AUD Converter</h1>
+        {/* user input section */}
         <CurrencyInput
           amount={audAmount}
           onChange={setAudAmount}
           onConvert={fetchRates}
         />
         
+        {/* convert button */}
+          <button  className="convert-button"
+          title="Covert"
+          onClick={convert}
+          > Covert</button>
+            
+        {/* showing cards */}
         <div>
           {currencies.map((cur) => (
             <CurrencyCard
